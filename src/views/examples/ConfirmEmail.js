@@ -20,7 +20,7 @@ const ConfirmEmail = props => {
                     setValid(false);
                 } else {
                     setTimeout(() => {
-                        props.history.push('/auth/login');
+                        window.location.pathname='/auth/login'
                     }, 5000);
                 }
             }

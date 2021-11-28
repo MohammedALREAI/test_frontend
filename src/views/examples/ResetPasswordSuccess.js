@@ -5,7 +5,7 @@ const ResetPasswordSuccess = props => {
 
     useEffect(() => {
         setTimeout(() => {
-            props.history.push("/auth/login");
+            window.location.pathname="/auth/login";
         }, 5000);
     }, [])
 
