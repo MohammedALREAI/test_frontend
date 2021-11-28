@@ -30,8 +30,7 @@ import {
     InputGroup,
     Col
 } from "reactstrap";
-import {confirmReset, login} from "../../network/ApiAxios";
-import Toast from "react-bootstrap/Toast";
+import {confirmReset} from "../../network/ApiAxios";
 import {useParams} from "react-router-dom";
 
 const ConfirmPassword = props => {

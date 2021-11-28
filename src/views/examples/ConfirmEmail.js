@@ -26,7 +26,7 @@ const ConfirmEmail = props => {
             }
             runAsync();
         }
-    }, [id])
+    }, [])
 
     return (
         <>
