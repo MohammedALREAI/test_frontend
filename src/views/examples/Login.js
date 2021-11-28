@@ -52,7 +52,7 @@ const Login = props => {
             setError("");
             localStorage.setItem("token", data.accessToken);
             localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.pathname="/"
+            props.history.push('/')
         } else {
             setPassword("");
             setError(data.msg);
@@ -156,6 +156,7 @@ const Login = props => {
                 <Row className="mt-3">
                     <Col xs="6">
                         <a
+                        href="/"
                             className="text-light"
                             onClick={() => props.history.push('/auth/reset-password')}
                         >
@@ -164,6 +165,8 @@ const Login = props => {
                     </Col>
                     <Col className="text-right" xs="6">
                         <a
+                                                href="/"
+
                             className="text-light"
                             onClick={() => props.history.push('/auth/register')}
                         >

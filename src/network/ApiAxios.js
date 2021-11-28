@@ -1,12 +1,8 @@
 import axios from 'axios';
 import config from "../config";
 
-// const https = require('https');
-//
-// const agent = new https.Agent({
-//     rejectUnauthorized: false,
-// });
 
+console.log("rrr",config.WS_BASE_URL);
 const instance = axios.create({
     baseURL: config.WS_BASE_URL,
 });
@@ -18,6 +14,8 @@ instance.interceptors.request.use(async (config) => {
     return config;
 });
 
+
+
 export const getAll = async () => (
     await instance.post('users/all')
 );
@@ -25,7 +23,7 @@ export const getAll = async () => (
 export const register = async (name, email, password) => {
     // phone, agency, role
     try {
-    return await axios.post('http://localhost:3000/api/auth/signup', {
+    return await instance.post('auth/signup', {
          name, email, password
      })
 
@@ -51,7 +49,7 @@ export const confirmReset = async (id, password) => (
 
 export const login = async (email, password) => {
   try {
-    return await axios.post('http://localhost:3000/api/auth/login', {
+    return await instance.post('auth/login', {
           email, password
      })
 

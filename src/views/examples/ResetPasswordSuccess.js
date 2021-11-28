@@ -1,6 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
-import {confirmRegister} from "../../network/ApiAxios";
+import React, {useEffect} from 'react';
 import {Card, CardBody, Col} from "reactstrap";
 
 const ResetPasswordSuccess = props => {

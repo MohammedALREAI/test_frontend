@@ -21,7 +21,6 @@ import React, {useState} from "react";
 import {
     Button,
     Card,
-    CardHeader,
     CardBody,
     FormGroup,
     Form,
@@ -29,10 +28,9 @@ import {
     InputGroupAddon,
     InputGroupText,
     InputGroup,
-    Row,
     Col
 } from "reactstrap";
-import {confirmReset, forgotPassword, login} from "../../network/ApiAxios";
+import {confirmReset, login} from "../../network/ApiAxios";
 import Toast from "react-bootstrap/Toast";
 import {useParams} from "react-router-dom";
 
