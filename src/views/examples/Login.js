@@ -42,16 +42,12 @@ const Login = props => {
 
     const tryLogin = async () => {
 
-        console.log("test1");
         const response = await login(email, password);
-        console.log("response1111",response);
 
 
         const {data} = response;
-        console.log("test2",data);
 
         if (data.accessToken) {
-            console.log("test3");
 
             setError("");
             localStorage.setItem("token", data.accessToken);
